@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shazi Sports</title>
+
+    <link href="style.css" rel="stylesheet" type="text/css">
+    </head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+                    <a href="#">Shazi Sports</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="javascript:void(0)" class="login-btn" id="loginBtn">Login</a></li>
+
+        </ul>
+        <div class="hamburger" id="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <header>
+        <div class="container">
+            <h1>Gloves Sports</h1>
+            <p>Choose the Best Gloves for Your Sport</p>
+           
+        </div>
+        
+    </header>
+    <main>
+        <section class="gloves-list">
+            <h2>Our Popular Gloves</h2>
+            <div class="glove-card">
+                <img src="c:\Users\admin\OneDrive\Desktop\gloves.jpg" alt="Boxing Glove" class="glove-image">
+                <h3>Boxing Gloves</h3>
+                <p>Perfect for training and competitions.</p>
+                <button onclick="showDetails('boxing')">View Details</button>
+            </div>
+            <div class="glove-card">
+                <img src="c:\Users\admin\OneDrive\Desktop\gloves1.jpg" alt="Football Glove" class="glove-image">
+                <h3>Football Gloves</h3>
+                <p>Great grip and protection for your hands.</p>
+                <button onclick="showDetails('football')">View Details</button>
+            </div>
+            <div class="glove-card">
+                <img src="c:\Users\admin\OneDrive\Desktop\gloves3.jpg" alt="Tennis Glove" class="glove-image">
+                <h3>Tennis Gloves</h3>
+                <p>Comfortable and durable for your game.</p>
+                <button onclick="showDetails('tennis')">View Details</button>
+            </div>
+        </section>
+        <section id="details-section" class="details-section">
+            <h2>Glove Details</h2>
+            <div id="details-content"></div>
+            <button id="close-details" onclick="closeDetails()">Close</button>
+        </section>
+        <section class="size-slider">
+            <h2>Choose Your Size</h2>
+            <input type="range" id="size-range" min="1" max="10" value="5" step="1" oninput="updateSizeLabel()">
+            <p>Size: <span id="size-value">5</span></p>
+        </section>
+    </main>
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModal">&times;</span>
+            <div class="tabs">
+                <button class="tab-button" id="loginTab">Login</button>
+                <button class="tab-button" id="registerTab">Register</button>
+            </div>
+            <div id="loginForm" class="form-container">
+                <h2>Login</h2>
+                <form>
+                    <label for="loginUsername">Username:</label>
+                    <input type="text" id="loginUsername" name="loginUsername" required><br><br>
+                    <label for="loginPassword">Password:</label>
+                    <input type="password" id="loginPassword" name="loginPassword" required><br><br>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+            <div id="registerForm" class="form-container" style="display: none;">
+                <h2>Register</h2>
+                <form>
+                    <label for="registerUsername">Username:</label>
+                    <input type="text" id="registerUsername" name="registerUsername" required><br><br>
+                    <label for="registerEmail">Email:</label>
+                    <input type="email" id="registerEmail" name="registerEmail" required><br><br>
+                    <label for="registerPassword">Password:</label>
+                    <input type="password" id="registerPassword" name="registerPassword" required><br><br>
+                    <button type="submit">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <footer>
+        <p>&copy; 2024 Gloves Sports. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
